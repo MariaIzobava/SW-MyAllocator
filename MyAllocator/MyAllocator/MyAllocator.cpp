@@ -12,22 +12,22 @@
 
 class MyClass {
 private:
-	const int x;
+	const int x_;
 public:
-	MyClass(int x) : x(x) {
+	MyClass(int x) : x_(x) {
 		printf("Element with id=%d is created\n", x);
 	}
 
-	MyClass(const MyClass& x) : x(x.x) {
-		printf("Element with id=%d is copied\n", x);
+	MyClass(const MyClass& x) : x_(x.x_) {
+		printf("Element with id=%d is copied\n", x_);
 	}
 
 	~MyClass() {
-		printf("Element with id=%d is deleted\n", x);
+		printf("Element with id=%d is deleted\n", x_);
 	}
 
 	int get_ID() const {
-		return x;
+		return x_;
 	}
 };
 
@@ -35,22 +35,22 @@ public:
 
 class MemoryManager {
 private:
-	static constexpr int Nbytes = 100;
-	int8_t memory[Nbytes];
-	std::vector<bool> free_map;
+	static constexpr int Nbytes_ = 100;
+	int8_t memory_[Nbytes_];
+	std::vector<bool> free_map_;
 	void print() const {
-		for (auto memory_byte : free_map)
+		for (auto memory_byte : free_map_)
 			printf("%d ", memory_byte);
 		printf("\n");
 	}
 
 	void mark_as(int left_range, int right_range, bool flag) {
-		std::fill(free_map.begin() + left_range, free_map.begin() + right_range, flag);
+		std::fill(free_map_.begin() + left_range, free_map_.begin() + right_range, flag);
 	}
 
 public:
 	MemoryManager() {
-		free_map.resize(Nbytes);
+		free_map_.resize(Nbytes_);
 		printf("Constructor for MyBuffer\n");
 
 	}
@@ -61,8 +61,8 @@ public:
 	MemoryManager(const MemoryManager& b) = delete;
 
 	void free_memory(void* p, size_t n) {
-		auto k = (int8_t *)p - memory;
-		if (k + n - 1 >= Nbytes) throw std::bad_alloc();
+		auto k = (int8_t *)p - memory_;
+		if (k + n - 1 >= Nbytes_) throw std::bad_alloc();
 		mark_as(k, k + n, 0);
 		printf("%d bytes were freed in buffer\n", n);
 		MemoryManager::print();
@@ -70,8 +70,8 @@ public:
 
 	void* find_sufficient_block(const size_t& n) {
 		int k = 0;
-		std::vector<bool>::iterator first = free_map.begin();
-		std::vector<bool>::iterator last = free_map.end();
+		std::vector<bool>::iterator first = free_map_.begin();
+		std::vector<bool>::iterator last = free_map_.end();
 		while (first != last) {
 			std::vector<bool>::iterator first_free = std::find(first, last, 0);
 			std::vector<bool>::iterator last_expected = first_free + n;
@@ -79,7 +79,7 @@ public:
 				break;
 			std::vector<bool>::iterator first_taken_in_range_n = std::find(first_free, last_expected, 1);
 			if (first_taken_in_range_n == last_expected)
-				return memory + (first_free - free_map.begin());
+				return memory_ + (first_free - free_map_.begin());
 			else
 				first = std::find(first_taken_in_range_n, last, 0);
 		}
@@ -90,8 +90,8 @@ public:
 	}
 
 	void fill_memory(void* p, size_t n) {
-		auto k = (int8_t *)p - memory;
-		if (k + n - 1 >= Nbytes) throw std::bad_alloc();
+		auto k = (int8_t *)p - memory_;
+		if (k + n - 1 >= Nbytes_) throw std::bad_alloc();
 		mark_as(k, k + n, 1);
 		printf("Filled space for %d bytes in buffer\n", n);
 		MemoryManager::print();
