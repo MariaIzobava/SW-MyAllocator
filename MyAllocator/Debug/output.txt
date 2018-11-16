@@ -1,0 +1,127 @@
+Constructor for MyBuffer
+Constructor for MyAllocator
+Copy constructor for MyAllocator
+Filled space for 8 bytes in buffer
+1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Allocated memory for 1 elements of type struct std::_Container_proxy
+Memory was successfuly initialized with new object of type struct std::_Container_proxy
+Destructor for MyAllocator
+0
+Element with id=34 is created
+Filled space for 4 bytes in buffer
+1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Allocated memory for 1 elements of type class MyClass
+Element with id=34 is copied
+Element with id=34 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=34 is deleted
+Element with id=34 is deleted
+Element with id=123 is created
+Filled space for 8 bytes in buffer
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Allocated memory for 2 elements of type class MyClass
+Element with id=123 is copied
+Element with id=123 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=123 is deleted
+Element with id=34 is copied
+Element with id=34 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=34 is deleted
+Element with id=34 is deleted
+Object was successfuly destroyed
+4 bytes were freed in buffer
+1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Memory is freed for 1 elements of type class MyClass
+Element with id=123 is deleted
+Element with id=6 is created
+Filled space for 12 bytes in buffer
+1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Allocated memory for 3 elements of type class MyClass
+Element with id=6 is copied
+Element with id=6 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=6 is deleted
+Element with id=34 is copied
+Element with id=34 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=34 is deleted
+Element with id=123 is copied
+Element with id=123 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=123 is deleted
+Element with id=34 is deleted
+Object was successfuly destroyed
+Element with id=123 is deleted
+Object was successfuly destroyed
+8 bytes were freed in buffer
+1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Memory is freed for 2 elements of type class MyClass
+Element with id=6 is deleted
+Element with id=6 is deleted
+Object was successfuly destroyed
+Element with id=56 is created
+Element with id=56 is copied
+Element with id=56 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=56 is deleted
+Element with id=56 is deleted
+Element with id=8 is created
+Filled space for 16 bytes in buffer
+1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Allocated memory for 4 elements of type class MyClass
+Element with id=8 is copied
+Element with id=8 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=8 is deleted
+Element with id=34 is copied
+Element with id=34 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=34 is deleted
+Element with id=123 is copied
+Element with id=123 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=123 is deleted
+Element with id=56 is copied
+Element with id=56 is copied
+Memory was successfuly initialized with new object of type class MyClass
+Element with id=56 is deleted
+Element with id=34 is deleted
+Object was successfuly destroyed
+Element with id=123 is deleted
+Object was successfuly destroyed
+Element with id=56 is deleted
+Object was successfuly destroyed
+12 bytes were freed in buffer
+1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Memory is freed for 3 elements of type class MyClass
+Element with id=8 is deleted
+pop_back
+Element with id=8 is deleted
+Object was successfuly destroyed
+Vector size = 3
+Element with id=34 is copied
+ID=34 Element with id=34 is deleted
+Element with id=123 is copied
+ID=123 Element with id=123 is deleted
+Element with id=56 is copied
+ID=56 Element with id=56 is deleted
+
+Element with id=34 is deleted
+Object was successfuly destroyed
+Element with id=123 is deleted
+Object was successfuly destroyed
+Element with id=56 is deleted
+Object was successfuly destroyed
+16 bytes were freed in buffer
+1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Memory is freed for 4 elements of type class MyClass
+Copy constructor for MyAllocator
+Object was successfuly destroyed
+8 bytes were freed in buffer
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Memory is freed for 1 elements of type struct std::_Container_proxy
+Destructor for MyAllocator
+Destructor for MyAllocator
+Destructor for MyAllocator
+BUFFER IS DELETED!!

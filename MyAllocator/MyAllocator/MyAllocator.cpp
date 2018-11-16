@@ -1,7 +1,6 @@
+
 #include "pch.h"
 #define _CRT_SECURE_NO_WARNINGS
-
-
 #include <cstdio>
 #include <cstdlib>
 #include <new>
@@ -71,14 +70,20 @@ public:
 
 	void* find_sufficient_block(const size_t& n) {
 		int k = 0;
-		for (size_t i = 0; i < Nbytes; ++i) {
-			if (!free_map[i]) k++;
-			else k = 0;
-			if (k == n) {
-				printf("Found place for %d bytes in buffer\n", n);
-				return memory + (i - k + 1);
-			}
+		std::vector<bool>::iterator first = free_map.begin();
+		std::vector<bool>::iterator last = free_map.end();
+		while (first != last) {
+			std::vector<bool>::iterator first_free = std::find(first, last, 0);
+			std::vector<bool>::iterator last_expected = first_free + n;
+			if (last_expected > last)
+				break;
+			std::vector<bool>::iterator first_taken_in_range_n = std::find(first_free, last_expected, 1);
+			if (first_taken_in_range_n == last_expected)
+				return memory + (first_free - free_map.begin());
+			else
+				first = std::find(first_taken_in_range_n, last, 0);
 		}
+
 		printf("Couldn't find place for %d bytes in buffer\n", n);
 		MemoryManager::print();
 		return nullptr;
@@ -148,7 +153,7 @@ struct MyAllocator {
 };
 
 int main() {
-	//freopen("output.txt", "w", stdout);
+	freopen("output.txt", "w", stdout);
 	/**MyClass a(30);
 	MyClass *p = new MyClass(40);
 	delete p;
@@ -187,4 +192,5 @@ int main() {
 	for (auto q : v)
 		printf("ID=%d ", q.get_ID());
 	printf("\n");
+	
 }
